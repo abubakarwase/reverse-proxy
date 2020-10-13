@@ -1,10 +1,6 @@
-const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middlewares/async");
 const axios = require("axios");
 
-// @desc    Get single bootcamps
-// @route   GET /api/v1/bootcamps/:id
-// @access  Public
 exports.getHtml = asyncHandler(async (req, res, next) => {
   console.log(req.query.address);
   let addressToBeHit = req.query.address.map((item) => axios.get(`${item}`));
